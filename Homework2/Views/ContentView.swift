@@ -13,18 +13,34 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("Typicode Responses")
-                    .font(.system(.largeTitle).bold())
-                typicodeView()
+                usersView()
             }
+            .navigationTitle("User Responses")
             .onAppear {
                 view_model.getTypicode()
             }
         }
     }
     
-    private func typicodeView() -> some View {
-        List(view_model.typicodes) { t in
+    private func usersView() -> some View {
+        ForEach(Array(view_model.users.keys).sorted(), id: \.self) { t in
+            NavigationLink {
+                if let test = view_model.users[t] {
+                    postsView(test)
+                }
+            } label: {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 15)
+                        .foregroundColor(Color(hue: 0.619, saturation: 0.982, brightness: 0.98, opacity: 0.35))
+                        .frame(width: 250)
+                    Text("User \(t)")
+                }
+            }
+        }
+    }
+    
+    private func postsView(_ arr: [Typicode]) -> some View {
+        List(arr) { t in
             NavigationLink {
                 ZStack {
                     LinearGradient(colors: [.yellow, .blue], startPoint: .topLeading, endPoint: .bottomTrailing)
@@ -40,23 +56,16 @@ struct ContentView: View {
                                 .multilineTextAlignment(.center)
                                 .padding()
                                 .italic()
-                            
                         }
-                        
                     }
                     .padding()
                 }
             } label: {
                 HStack {
-                    Text("\(t.id).")
-                        .fontWeight(.medium)
-                    
                     Text(t.title)
-                        
                 }
             }
         }
-        
     }
 }
 

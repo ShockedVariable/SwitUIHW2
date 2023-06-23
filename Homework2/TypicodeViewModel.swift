@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 class TypicodeViewModel: ObservableObject {
-    @Published var typicodes = [Typicode]()
+    @Published var users = [Int: [Typicode]]()
     var cancel_label = Set<AnyCancellable>()
     let service = TypicodeService()
     
@@ -23,7 +23,14 @@ class TypicodeViewModel: ObservableObject {
                         print(err.localizedDescription)
                 }
             } receiveValue: { [weak self] typicode in
-                self?.typicodes = typicode
+                for i in typicode {
+                    if let _ = self?.users[i.userId] {
+                        self?.users[i.userId]?.append(i)
+                    }
+                    else {
+                        self?.users[i.userId] = [i]
+                    }
+                }
             }
             .store(in: &cancel_label)
     }
