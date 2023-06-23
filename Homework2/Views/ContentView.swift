@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("Test")
+                Text("Typicode Responses")
                     .font(.system(.largeTitle).bold())
                 typicodeView()
             }
@@ -26,11 +26,36 @@ struct ContentView: View {
     private func typicodeView() -> some View {
         List(view_model.typicodes) { t in
             NavigationLink {
-                Text(t.body)
+                ZStack {
+                    LinearGradient(colors: [.yellow, .blue], startPoint: .topLeading, endPoint: .bottomTrailing)
+                        .ignoresSafeArea()
+                    VStack {
+                        Text("Words of Encouragment")
+                            .font(.system(.title3).bold())
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 17)
+                                .foregroundColor(.gray.opacity(0.35))
+                                .frame(width: .infinity, height: 150)
+                            Text(t.body)
+                                .multilineTextAlignment(.center)
+                                .italic()
+                            
+                        }
+                        
+                    }
+                    .padding()
+                }
             } label: {
-                Text(t.title)
+                HStack {
+                    Text("\(t.id).")
+                        .fontWeight(.medium)
+                    
+                    Text(t.title)
+                        
+                }
             }
         }
+        
     }
 }
 
