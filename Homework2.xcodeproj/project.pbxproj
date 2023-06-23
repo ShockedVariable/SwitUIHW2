@@ -12,6 +12,7 @@
 		A155182C2A45425B000B6B77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A155182B2A45425B000B6B77 /* Assets.xcassets */; };
 		A155182F2A45425B000B6B77 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A155182E2A45425B000B6B77 /* Preview Assets.xcassets */; };
 		A155183A2A4548E3000B6B77 /* TypicodeResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15518392A4548E3000B6B77 /* TypicodeResponses.swift */; };
+		A155183C2A45497D000B6B77 /* TypicodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155183B2A45497D000B6B77 /* TypicodeService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		A155182E2A45425B000B6B77 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A15518352A45463C000B6B77 /* SubArrayFib.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SubArrayFib.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A15518392A4548E3000B6B77 /* TypicodeResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypicodeResponses.swift; sourceTree = "<group>"; };
+		A155183B2A45497D000B6B77 /* TypicodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypicodeService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		A15518372A454810000B6B77 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				A155183B2A45497D000B6B77 /* TypicodeService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			files = (
 				A155183A2A4548E3000B6B77 /* TypicodeResponses.swift in Sources */,
 				A155182A2A45425A000B6B77 /* ContentView.swift in Sources */,
+				A155183C2A45497D000B6B77 /* TypicodeService.swift in Sources */,
 				A15518282A45425A000B6B77 /* Homework2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
