@@ -8,14 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var view_model = TypicodeViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            VStack {
+                Text("Test")
+                    .font(.system(.largeTitle).bold())
+                typicodeView()
+            }
+            .onAppear {
+                view_model.getTypicode()
+            }
         }
-        .padding()
+    }
+    
+    private func typicodeView() -> some View {
+        List(view_model.typicodes) { t in
+            NavigationLink {
+                Text(t.body)
+            } label: {
+                Text(t.title)
+            }
+        }
     }
 }
 
