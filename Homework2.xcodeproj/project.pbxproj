@@ -11,6 +11,7 @@
 		A155182A2A45425A000B6B77 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15518292A45425A000B6B77 /* ContentView.swift */; };
 		A155182C2A45425B000B6B77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A155182B2A45425B000B6B77 /* Assets.xcassets */; };
 		A155182F2A45425B000B6B77 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A155182E2A45425B000B6B77 /* Preview Assets.xcassets */; };
+		A155183A2A4548E3000B6B77 /* TypicodeResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15518392A4548E3000B6B77 /* TypicodeResponses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		A155182B2A45425B000B6B77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A155182E2A45425B000B6B77 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A15518352A45463C000B6B77 /* SubArrayFib.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SubArrayFib.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		A15518392A4548E3000B6B77 /* TypicodeResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypicodeResponses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +54,11 @@
 		A15518262A45425A000B6B77 /* Homework2 */ = {
 			isa = PBXGroup;
 			children = (
+				A15518382A454819000B6B77 /* Views */,
+				A15518372A454810000B6B77 /* Network */,
+				A15518362A45480A000B6B77 /* Model */,
 				A15518352A45463C000B6B77 /* SubArrayFib.playground */,
 				A15518272A45425A000B6B77 /* Homework2App.swift */,
-				A15518292A45425A000B6B77 /* ContentView.swift */,
 				A155182B2A45425B000B6B77 /* Assets.xcassets */,
 				A155182D2A45425B000B6B77 /* Preview Content */,
 			);
@@ -67,6 +71,29 @@
 				A155182E2A45425B000B6B77 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A15518362A45480A000B6B77 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A15518392A4548E3000B6B77 /* TypicodeResponses.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A15518372A454810000B6B77 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A15518382A454819000B6B77 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A15518292A45425A000B6B77 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A155183A2A4548E3000B6B77 /* TypicodeResponses.swift in Sources */,
 				A155182A2A45425A000B6B77 /* ContentView.swift in Sources */,
 				A15518282A45425A000B6B77 /* Homework2App.swift in Sources */,
 			);
