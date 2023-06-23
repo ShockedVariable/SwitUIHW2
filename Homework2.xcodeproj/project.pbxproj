@@ -13,6 +13,7 @@
 		A155182F2A45425B000B6B77 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A155182E2A45425B000B6B77 /* Preview Assets.xcassets */; };
 		A155183A2A4548E3000B6B77 /* TypicodeResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15518392A4548E3000B6B77 /* TypicodeResponses.swift */; };
 		A155183C2A45497D000B6B77 /* TypicodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155183B2A45497D000B6B77 /* TypicodeService.swift */; };
+		A155183E2A454AEB000B6B77 /* TypicodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155183D2A454AEB000B6B77 /* TypicodeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A15518352A45463C000B6B77 /* SubArrayFib.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SubArrayFib.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A15518392A4548E3000B6B77 /* TypicodeResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypicodeResponses.swift; sourceTree = "<group>"; };
 		A155183B2A45497D000B6B77 /* TypicodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypicodeService.swift; sourceTree = "<group>"; };
+		A155183D2A454AEB000B6B77 /* TypicodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypicodeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		A15518262A45425A000B6B77 /* Homework2 */ = {
 			isa = PBXGroup;
 			children = (
+				A155183D2A454AEB000B6B77 /* TypicodeViewModel.swift */,
 				A15518382A454819000B6B77 /* Views */,
 				A15518372A454810000B6B77 /* Network */,
 				A15518362A45480A000B6B77 /* Model */,
@@ -172,6 +175,7 @@
 				A155183A2A4548E3000B6B77 /* TypicodeResponses.swift in Sources */,
 				A155182A2A45425A000B6B77 /* ContentView.swift in Sources */,
 				A155183C2A45497D000B6B77 /* TypicodeService.swift in Sources */,
+				A155183E2A454AEB000B6B77 /* TypicodeViewModel.swift in Sources */,
 				A15518282A45425A000B6B77 /* Homework2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
