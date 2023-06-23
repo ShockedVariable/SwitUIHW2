@@ -19,6 +19,7 @@
 		A15518292A45425A000B6B77 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A155182B2A45425B000B6B77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A155182E2A45425B000B6B77 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A15518352A45463C000B6B77 /* SubArrayFib.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SubArrayFib.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +52,7 @@
 		A15518262A45425A000B6B77 /* Homework2 */ = {
 			isa = PBXGroup;
 			children = (
+				A15518352A45463C000B6B77 /* SubArrayFib.playground */,
 				A15518272A45425A000B6B77 /* Homework2App.swift */,
 				A15518292A45425A000B6B77 /* ContentView.swift */,
 				A155182B2A45425B000B6B77 /* Assets.xcassets */,
