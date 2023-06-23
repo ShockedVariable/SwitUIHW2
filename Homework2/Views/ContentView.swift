@@ -38,6 +38,7 @@ struct ContentView: View {
                                 .frame(width: .infinity, height: 150)
                             Text(t.body)
                                 .multilineTextAlignment(.center)
+                                .padding()
                                 .italic()
                             
                         }
