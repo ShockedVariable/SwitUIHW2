@@ -44,6 +44,23 @@ class TypicodeService {
         return try JSONDecoder().decode([Typicode].self, from: data)
     }
     
+    func addPost(_ post_data: PostData) async throws -> Typicode {
+        guard let url = URL(string: url_string) else { throw APIError.invalidUrl }
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.httpBody = try JSONEncoder().encode(post_data)
+        request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
+        let (data, _) = try await URLSession.shared.data(for: request)
+        
+//        guard (response as? HTTPURLResponse)?.statusCode == 200 else { throw APIError.invalidResponse }
+        
+        if let response_string = String(data: data, encoding: .utf8) {
+            print("Response: \(response_string)")
+        }
+        
+        return try JSONDecoder().decode(Typicode.self, from: data)
+    }
+    
     func fetchContacts() -> Future<[Typicode], Error> {
         return Future { [weak self] promise in
             guard let self = self else { return }

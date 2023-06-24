@@ -19,6 +19,7 @@ struct ContentView: View {
             .onAppear {
 //                view_model.getTypicode()
                 view_model.getTypicodeUsingAsyncAwait()
+                view_model.addPost()
             }
         }
     }

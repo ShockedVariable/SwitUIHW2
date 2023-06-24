@@ -8,6 +8,13 @@
 import Foundation
 import Combine
 
+struct PostData: Codable {
+    let id: Int
+    let userId: Int
+    let body: String
+    let title: String
+}
+
 class TypicodeViewModel: ObservableObject {
     @Published var users = [Int: [Typicode]]()
     var cancel_label = Set<AnyCancellable>()
@@ -37,6 +44,18 @@ class TypicodeViewModel: ObservableObject {
                 else {
                     print(error.localizedDescription)
                 }
+            }
+        }
+    }
+    
+    @MainActor func addPost() {
+        Task {
+            do {
+                let post: Typicode = try await self.service.addPost(PostData(id: 101, userId: 1, body: "Post body test", title: "Post title test"))
+                print("post = \(post)")
+            }
+            catch {
+                print(error.localizedDescription)
             }
         }
     }
