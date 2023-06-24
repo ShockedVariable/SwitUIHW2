@@ -13,8 +13,32 @@ class TypicodeViewModel: ObservableObject {
     var cancel_label = Set<AnyCancellable>()
     let service = TypicodeService()
     
-    func getTypicodeUsingAsyncAwait() {
-        
+    private func parsePosts(_ typicode: [Typicode]) {
+        for i in typicode {
+            if let _ = self.users[i.userId] {
+                self.users[i.userId]?.append(i)
+            }
+            else {
+                self.users[i.userId] = [i]
+            }
+        }
+    }
+    
+    @MainActor func getTypicodeUsingAsyncAwait() {
+        Task {
+            do {
+                let posts: [Typicode] = try await service.fetchContactsUsingAsyncAwait()
+                self.parsePosts(posts)
+            }
+            catch {
+                if let error = error as? APIError {
+                    print(error.description)
+                }
+                else {
+                    print(error.localizedDescription)
+                }
+            }
+        }
     }
     
     func getTypicode() {

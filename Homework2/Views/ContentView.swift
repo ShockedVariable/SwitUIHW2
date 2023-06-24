@@ -17,7 +17,8 @@ struct ContentView: View {
             }
             .navigationTitle("User Responses")
             .onAppear {
-                view_model.getTypicode()
+//                view_model.getTypicode()
+                view_model.getTypicodeUsingAsyncAwait()
             }
         }
     }
@@ -32,8 +33,8 @@ struct ContentView: View {
             } label: {
                 ZStack {
                     RoundedRectangle(cornerRadius: 15)
-                        .foregroundColor(Color(hue: 0.619, saturation: 0.982, brightness: 0.98, opacity: 0.35))
-                        .frame(width: 250)
+                        .foregroundColor(Color(hue: 0.619, saturation: 0.982, brightness: 0.98, opacity: 0.15))
+                        .frame(width: 125)
                     Text("User \(t)")
                 }
             }
