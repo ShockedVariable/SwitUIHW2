@@ -13,6 +13,10 @@ class TypicodeViewModel: ObservableObject {
     var cancel_label = Set<AnyCancellable>()
     let service = TypicodeService()
     
+    func getTypicodeUsingAsyncAwait() {
+        
+    }
+    
     func getTypicode() {
         self.service.fetchContacts()
             .sink { completion in

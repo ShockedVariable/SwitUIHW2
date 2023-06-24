@@ -27,6 +27,7 @@ struct ContentView: View {
             NavigationLink {
                 if let test = view_model.users[t] {
                     postsView(test)
+                        .navigationTitle("User \(t)")
                 }
             } label: {
                 ZStack {
